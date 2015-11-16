@@ -10,8 +10,8 @@ $(document).ready(function () {
 	})
 //add item to the list
 function saveToList(itemName){
-	var listItem = '<li><button class="check">Done</button><span>'+itemName+
-	+'<img class="delete" src="images/delete.png"/>'+'</li>';
+	var listItem = '<li><button class="check">Done</button>'+itemName+
+	'<img class="delete" src="images/delete.png"/>'+'</li>';
 	$list.prepend(listItem);
 }
 //check it off
