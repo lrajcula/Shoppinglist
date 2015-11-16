@@ -6,7 +6,7 @@ $(document).ready(function () {
 		event.preventDefault();
 		var newItemName = $(this).find('input').val();
 		console.log(newItemName);
-		saveToList(newItemName);
+		saveToList(newItemName)
 	})
 //add item to the list
 function saveToList(itemName){
@@ -19,7 +19,7 @@ $list.on('click', '.check', function(){
 	$(this).parent().toggleClass('strike');
 })
 //delete
-$list.on('click', 'li', '.delete', function() {
+$list.on('click', '.delete', function() {
   $(this).slideUp('.delete');
 
 })
