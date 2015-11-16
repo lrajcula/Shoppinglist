@@ -11,13 +11,10 @@ $(document).ready(function () {
 //add item to the list
 function saveToList(itemName){
 	var listItem = '<li><button class="check">Done</button><span>'+itemName+
-	'</span>'+'<img class="delete" src="images/delete.png"/>'+'</li>';
+	'<img class="delete" src="images/delete.png"/>'+'</li>';
 	$list.prepend(listItem);
 }
 //check it off
-/*$list.on('click', 'li' , '.strike', function(){
-	$(this).children().toggleClass('strike');
-})*/
 $list.on('click', '.check', function(){
 	$(this).parent().toggleClass('strike');
 })
