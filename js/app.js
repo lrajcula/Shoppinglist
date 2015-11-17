@@ -4,9 +4,14 @@ $(document).ready(function () {
 //accept the user input
 	$form.submit(function(event){
 		event.preventDefault();
-		var newItemName = $(this).find('input').val();
+		var newItemName = $(this).find('#add').val();
+		if (newItemName.trim() == ""){
+			alert('Hi Aric stop being a jackass');
+		return 
+	}
+		$(this).find('#add').val("");
 		console.log(newItemName);
-		saveToList(newItemName)
+		saveToList(newItemName);
 	})
 //add item to the list
 function saveToList(itemName){
@@ -19,8 +24,7 @@ $list.on('click', '.check', function(){
 	$(this).parent().toggleClass('strike');
 })
 //delete
-$list.on('click', '.delete', function() {
-  $(this).slideUp('.delete');
-
-})
+$list.on('click' , '.delete', function() { 
+	$(this).parent().hide(); 
+});
 });
