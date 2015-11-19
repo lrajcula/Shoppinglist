@@ -6,7 +6,7 @@ $(document).ready(function () {
 		event.preventDefault();
 		var newItemName = $(this).find('#add').val();
 		if (newItemName.trim() == ""){
-			alert('Hi Aric stop being a jackass');
+			alert('Oops. Enter text to add to the shopping list!');
 		return 
 	}
 		$(this).find('#add').val("");
